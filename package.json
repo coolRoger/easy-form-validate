@@ -1,0 +1,19 @@
+{
+    "name": "form-validate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "form-validate.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-preset-latest": "^6.24.1"
+    },
+    "dependencies": {
+        "babel-polyfill": "^6.26.0"
+    }
+}

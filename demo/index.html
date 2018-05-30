@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../dist/main.js"></script>
+    <title>Form-Validate Demo</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            position: relative;
+        }
+
+        input.error{
+            border-color: red;
+        }
+
+        body{
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        #form {
+            text-align: left;
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p, pre{
+            width: 100%;
+            white-space: normal;
+            overflow-wrap: break-word;
+            padding: 12px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var rules = {
+                number: {
+                    required: true,
+                    min: 6,
+                    max: 8,
+                },
+                email: {
+                    required: true,
+                },
+                password: {
+                    required: true,
+                },
+                comfirmPassword: {
+                    required: true,
+                    equalTo: "password"
+                }
+            };
+
+            var messages = {
+                number: {
+                    required: "数字不能为空",
+                    min: "数字不能少于6位数",
+                    max: "数字不能多于8位数",
+                },
+                email: {
+                    required: "Email不能为空",
+                },
+                password: {
+                    required: "Password不能为空",
+                },
+                comfirmPassword: {
+                    required: "Comfirm Password不能为空",
+                    equalTo: "Comfirm Password 必须跟 Password 一样"
+                }
+            };
+
+            var valBtn = document.getElementById("validate");
+
+            valBtn.onclick = function () {
+                
+                var inputs = document.querySelectorAll("input");
+                
+                for(var i = 0; i < inputs.length; i++){
+                    inputs[i].setAttribute("class", "");
+                }
+                
+                var formObj = {
+                    email: document.getElementById("email").value,
+                    number: document.getElementById("number").value,
+                    password: document.getElementById("password").value,
+                    comfirmPassword: document.getElementById("comfirmPassword").value
+                }
+
+                var valRes = validate(rules, messages, formObj);
+                
+                if(valRes.status !== true){
+                    document.getElementById(valRes.field).setAttribute("class", "error");
+                }
+                document.getElementById("validateMsg").innerHTML = "<pre>" + JSON.stringify(valRes) + "</pre>";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="form">
+        <label for="email" name="email">Email: </label>
+        <br/>
+        <input name="email" type="text" id="email" />
+        <br/>
+        <br/>
+        <label for="number" name="number">Number(Tel): </label>
+        <br/>
+        <input name="number" type="number" id="number" />
+        <br/>
+        <br/>
+        <label for="password" name="password">Password: </label>
+        <br/>
+        <input name="password" type="password" id="password" />
+        <br/>
+        <br/>
+        <label for="comfirmPassword" name="comfirmPassword">Comfirm Password: </label>
+        <br/>
+        <input name="comfirmPassword" type="comfirmPassword" id="comfirmPassword" />
+        <br/>
+        <br/>
+        <button id="validate">Validate!</button>
+    </div>
+    <p id="validateMsg"></p>
+</body>
+
+</html>
