@@ -1,5 +1,5 @@
 import "babel-polyfill";
 
-import validate from "./form-validate";
+import validate from "../src/easy-form-validate";
 
 window.validate = validate;

@@ -1,9 +1,12 @@
 {
-    "name": "form-validate",
+    "name": "easy-form-validate",
     "version": "1.0.0",
-    "description": "",
-    "main": "form-validate.js",
+    "description": "A library that can validate form in different platform.",
+    "main": "build/form-validate.js",
     "scripts": {
+        "build": "npm-run-all builddev buildshim",
+        "builddev": "parcel build build/easy-form-validate.js",
+        "buildshim": "parcel build build/easy-form-validate.shim.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -11,11 +14,9 @@
     "license": "ISC",
     "devDependencies": {
         "babel-core": "^6.26.3",
-        "babel-preset-latest": "^6.24.1",
         "babel-plugin-transform-runtime": "^6.23.0",
-        "babel-polyfill": "^6.26.0"
-    },
-    "dependencies": {
-        
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-latest": "^6.24.1",
+        "npm-run-all": "^4.1.3"
     }
 }
