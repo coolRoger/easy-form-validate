@@ -79,4 +79,5 @@ console.log(formPassed);
 
 * In this library, some fields have default rules and messages preset,
 check out them in this project via **src/default.js**, `but don't edit this file directly, use your own rules variable to overwrite them!`
+* Checkout the **demo/index.html**, it shows the way how use to validate in DOM/jQuery  
 
