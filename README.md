@@ -2,11 +2,11 @@
 
 > A library that can validate form in different platform.
 
-<!-- ## Install
+## Install
 
 ```sh
-npm install --save-dev babel-preset-latest
-``` -->
+npm install easy-form-validate
+``` 
 
 ## Usage
 
@@ -16,7 +16,7 @@ npm install --save-dev babel-preset-latest
 
 ```html
 <head>
-    <script src="/dist/form-validate.shim.js"></script>
+    <script src="/dist/easy-form-validate.shim.js"></script>
     <script>
         window.validate(rules, messages, formObj);
     </script>
@@ -26,7 +26,7 @@ npm install --save-dev babel-preset-latest
 ### ES6
 
 ```javascript
-import validate from "form-validate";
+import validate from "easy-form-validate";
 
 validate(rules, messages, formObj);
 ```
