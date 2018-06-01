@@ -1,6 +1,6 @@
 {
     "name": "easy-form-validate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A library that can validate form in different platform.",
     "main": "build/easy-form-validate.js",
     "scripts": {
@@ -10,7 +10,9 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
-        "form", "validate", "form validate"
+        "form",
+        "validate",
+        "form validate"
     ],
     "author": "coolRoger",
     "license": "ISC",
