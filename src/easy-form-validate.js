@@ -96,6 +96,7 @@ const validate = function(customRules, customMessages, formObj) {
                     equal: successOutPut()
                 }
             };
+            results.push(analysis);
         }
     });
 

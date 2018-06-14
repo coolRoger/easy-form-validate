@@ -1,6 +1,7 @@
 import { successOutPut } from "./resultOutPut";
 
 function resultCheck(results) {
+    console.table(results);
     let errorList = [];
     results.forEach(result => {
         for (let prop in result.outcome) {
