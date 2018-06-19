@@ -1,3 +1,3 @@
-import validate from "../src/easy-form-validate";
+const validate = require("../src/easy-form-validate");
 
-export default validate;
+module.exports = validate;
