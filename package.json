@@ -1,6 +1,6 @@
 {
     "name": "easy-form-validate",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "description": "A library that can validate form in different platform.",
     "main": "build/easy-form-validate.js",
     "scripts": {
