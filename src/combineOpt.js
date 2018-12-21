@@ -22,4 +22,4 @@ function combineOpt(obj, defaultObj) {
     }
 }
 
-export default combineOpt;
+module.exports = combineOpt;

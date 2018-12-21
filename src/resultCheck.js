@@ -1,7 +1,6 @@
-import { successOutPut } from "./resultOutPut";
+const { successOutPut } = require("./resultOutPut");
 
 function resultCheck(results) {
-    console.log(results);
     let errorList = [];
     results.forEach(result => {
         for (let prop in result.outcome) {
@@ -19,8 +18,11 @@ function resultCheck(results) {
     if (errorList.length === 0) {
         return successOutPut();
     } else {
-        return errorList[0];
+        return {
+            summary: errorList[0],
+            detail: errorList
+        }
     }
 }
 
-export default resultCheck;
+module.exports = resultCheck;

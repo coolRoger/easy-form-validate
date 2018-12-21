@@ -1,4 +1,4 @@
-export function successOutPut() {
+function successOutPut() {
     let output = {
         status: true,
         message: "验证通过"
@@ -6,7 +6,7 @@ export function successOutPut() {
     return output;
 }
 
-export function errorOutPut(obj, field, key) {
+function errorOutPut(obj, field, key) {
     let output = {
         status: false,
         message: obj[field]
@@ -14,4 +14,9 @@ export function errorOutPut(obj, field, key) {
             : `${field}不合法`
     };
     return output;
+}
+
+module.exports = {
+    successOutPut,
+    errorOutPut
 }
