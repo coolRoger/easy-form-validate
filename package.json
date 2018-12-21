@@ -2,7 +2,7 @@
     "name": "easy-form-validate",
     "version": "1.1.0",
     "description": "A library that can validate form in different platform.",
-    "main": "build/easy-form-validate.js",
+    "main": "src/easy-form-validate.js",
     "scripts": {
         "build": "npm-run-all builddev buildshim",
         "builddev": "parcel build build/easy-form-validate.js",
