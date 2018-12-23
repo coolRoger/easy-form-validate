@@ -14,8 +14,8 @@ class EasyFormValidate {
     }
 
     validate() {
-        let rules = combineOpt(this.rules, defaultRules);
-        let messages = combineOpt(this.messages, defaultMessages);
+        let rules = combineOpt(this.rules, JSON.parse(defaultRules));
+        let messages = combineOpt(this.messages, JSON.parse(defaultMessages));
         let formObj = this.formObj;
         let fields = Object.keys(rules);
         let results = [];

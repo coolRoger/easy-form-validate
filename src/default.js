@@ -43,6 +43,6 @@ const defaultMessages = {
 };
 
 module.exports = {
-    defaultRules,
-    defaultMessages
+    defaultRules: JSON.stringify(defaultRules),
+    defaultMessages: JSON.stringify(defaultMessages)
 };

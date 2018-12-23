@@ -104,10 +104,12 @@
                     comfirmPassword: document.getElementById("comfirmPassword").value
                 }
 
-                var valRes = validate(rules, messages, formObj);
+                var valRes = new validate(rules, messages, formObj).validate();
+
+                console.log(valRes);
                 
-                if(valRes.status !== true){
-                    document.getElementById(valRes.field).setAttribute("class", "error");
+                if(valRes.summary.status !== true){
+                    document.getElementById(valRes.summary.field).setAttribute("class", "error");
                 }
                 document.getElementById("validateMsg").innerHTML = "<pre>" + JSON.stringify(valRes) + "</pre>";
             }
