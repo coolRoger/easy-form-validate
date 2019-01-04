@@ -1,11 +1,11 @@
-import "babel-polyfill";
+require("babel-polyfill");
 
-import validate from "../src/easy-form-validate";
+const validate = require("../src/easy-form-validate");
 
 if(window){
-    window.validate = validate;
+    window.EasyFormValidate = validate;
 }else if(global){
-    global.validate = validate;
+    global.EasyFormValidate = validate;
 }
 
 

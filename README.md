@@ -18,7 +18,9 @@ npm install easy-form-validate
 <head>
     <script src="/dist/easy-form-validate.shim.js"></script>
     <script>
-        window.validate(rules, messages, formObj);
+        var EasyFormValidate = window.EasyFormValidate;
+        var validate = new EasyFormValidate(rules, messages, formObj).validate();
+        console.log(validate);
     </script>
 </head>
 ```
@@ -26,9 +28,9 @@ npm install easy-form-validate
 ### ES6
 
 ```javascript
-import validate from "easy-form-validate";
+import EasyFormValidate from "easy-form-validate";
 
-validate(rules, messages, formObj);
+new EasyFormValidate(rules, messages, formObj).validate();
 ```
 
 ### QuickStart
@@ -61,7 +63,7 @@ var form = {
 
 /* Validate Form: */
 
-var formPassed = validate(rules, messages, form);
+var formPassed = new EasyFormValidate(rules, messages, form).validate();
 
 console.log(formPassed);
 

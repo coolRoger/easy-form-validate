@@ -104,7 +104,7 @@
                     comfirmPassword: document.getElementById("comfirmPassword").value
                 }
 
-                var valRes = new validate(rules, messages, formObj).validate();
+                var valRes = new EasyFormValidate(rules, messages, formObj).validate();
 
                 console.log(valRes);
                 

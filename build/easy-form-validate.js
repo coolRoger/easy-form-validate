@@ -1,3 +1,3 @@
-const validate = require("../src/easy-form-validate");
+const EasyFormValidate = require("../src/easy-form-validate");
 
-module.exports = validate;
+module.exports = EasyFormValidate;
