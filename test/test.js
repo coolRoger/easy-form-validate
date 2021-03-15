@@ -1,6 +1,6 @@
-const validate = require('../src/easy-form-validate');
+const EasyFormValidate = require("../lib/index").default;
 
-var formPassed = new validate(
+var formPassed = new EasyFormValidate(
     {
         email: {
             required: true
@@ -17,4 +17,4 @@ var formPassed = new validate(
     }
 ).validate();
 
-console.log(JSON.stringify(formPassed));
+console.log(formPassed);

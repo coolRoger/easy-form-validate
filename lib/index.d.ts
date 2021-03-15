@@ -1,9 +1,8 @@
-import "../typings/global.d";
 declare class EasyFormValidate {
-    rules: ruleObject;
-    messages: messageObject;
+    rules: Types.ruleObject;
+    messages: Types.messageObject;
     formObj: object;
-    constructor(rules: ruleObject, messages: messageObject, formObj: object);
-    validate(): any;
+    constructor(rules: Types.ruleObject, messages: Types.messageObject, formObj: object);
+    validate(): Types.successCallback | Types.errorCallback;
 }
 export default EasyFormValidate;

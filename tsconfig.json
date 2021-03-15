@@ -3,7 +3,7 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "es5",
-        "typeRoots": ["./typings"],
+        "typeRoots": ["./src/types"],
         "declaration": true,
         "outDir": "./lib",
         "rootDir": "./src"

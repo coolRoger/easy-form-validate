@@ -1,6 +1,11 @@
-export const d_rules:ruleObject = {
+export const d_rules: Types.ruleObject = {
     email: {
         regex: /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/g,
+    },
+    cellphone: {
+        regex: /^\d+$/g,
+        min: 4,
+        max: 16
     },
     number: {
         regex: /^\d+$/g,
@@ -17,10 +22,16 @@ export const d_rules:ruleObject = {
     }
 };
 
-export const d_messages:messageObject = {
+export const d_messages: Types.messageObject = {
     email: {
         regex: '请输入正确的邮箱格式',
         required: '邮箱不能为空'
+    },
+    cellphone: {
+        regex: '请输入正确电话号码',
+        required: '电话号码不能为空',
+        min: '电话号码位数不能少于4',
+        max: '电话号码位数不能多于16'
     },
     number: {
         regex: '请输入正确电话号码',
