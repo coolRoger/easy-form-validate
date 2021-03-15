@@ -6,10 +6,9 @@
     "scripts": {
         "dev": "tsc --watch",
         "test-dev": "nodemon ./test/test.js",
-        "build-ts": "parcel build src/index.ts --public-url .",
-        "build": "npm-run-all builddev buildshim",
-        "builddev": "parcel build build/easy-form-validate.js",
-        "buildshim": "parcel build build/easy-form-validate.shim.js",
+        "build": "npm-run-all build-es build-shim",
+        "build-es": "parcel build build/easy-form-validate.js",
+        "build-shim": "parcel build build/easy-form-validate.shim.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
