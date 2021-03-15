@@ -53,6 +53,7 @@
         window.onload = function () {
             var rules = {
                 number: {
+                    regex:/^\d+$/g,
                     required: true,
                     min: 6,
                     max: 8,
@@ -108,7 +109,7 @@
 
                 console.log(valRes);
                 
-                if(valRes.summary.status !== true){
+                if(valRes.status !== true){
                     document.getElementById(valRes.summary.field).setAttribute("class", "error");
                 }
                 document.getElementById("validateMsg").innerHTML = "<pre>" + JSON.stringify(valRes) + "</pre>";
